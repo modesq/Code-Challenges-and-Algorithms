@@ -25,6 +25,7 @@ class SLL:
         NewNode.next = self.head
         self.head = NewNode
 
+    # challenge two
     def delete_node(self, deletedValue):
         current = self.head
         if current.value == deletedValue:
@@ -35,6 +36,14 @@ class SLL:
                     current.next = current.next.next
                 else:
                     current = current.next
+
+    def find_middle(self):
+        current = self.head
+        middle_node = self.head
+        while current.next is not None:
+            current = current.next.next
+            middle_node = middle_node.next
+        return middle_node.value
 
     def print_SLL(self):
         printval = self.head
