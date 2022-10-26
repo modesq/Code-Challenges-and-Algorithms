@@ -69,7 +69,8 @@ class SLL:
     # challenge three
     def deleteNthFromTail(self, n):
         """
-        this method deletes the nth node from the tail of the SLL
+        this method deletes the nth node from the tail of the SLL, it works by doing two passes on the SLL, the first pass
+        to find the length of it, the second to find the nth node from the tail of the SLL
         """
         first = self.head
         second = self.head
