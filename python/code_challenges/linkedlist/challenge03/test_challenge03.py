@@ -1,7 +1,6 @@
 # Write your test here
 import pytest
-from challenge03 import SLL, Node
-
+from challenge03 import SLL
 
 def test_deleteNthFromTail():
     actual = sll_example.deleteNthFromTail(2)
