@@ -17,11 +17,6 @@ def test_is_valid_03(stack):
     expected=False
     assert actual== expected
 
-def test_is_valid_04(stack):
-    actual=stack.is_valid("[(hello)()]")
-    expected=True
-    assert actual== expected
-
 def test_is_valid_05(stack):
     actual=stack.is_valid("[{(())}]")
     expected=True
