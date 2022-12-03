@@ -1,0 +1,1 @@
+![Alt text](https://cdn.discordapp.com/attachments/984068511183831053/1048705737473413201/linkedlist3.png)

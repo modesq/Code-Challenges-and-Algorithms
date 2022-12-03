@@ -96,17 +96,3 @@ class Queue:
         returns a boolean value based on that
         """
         return self.pushStack.size == 0 and self.popStack.size == 0
-
-
-if __name__ == "__main__":
-    myQueue = Queue()
-    myQueue.push(1)
-    #  queue is: [1]
-    myQueue.push(2)
-    #  queue is: [1, 2] (leftmost is front of the queue)
-    myQueue.peek()
-    #  return 1
-    myQueue.pop()
-    #  return 1, queue is [2]
-    myQueue.empty()
-    #  return false

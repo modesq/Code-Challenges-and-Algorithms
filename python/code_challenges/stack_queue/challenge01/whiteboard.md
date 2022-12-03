@@ -1,1 +1,1 @@
-![](https://cdn.discordapp.com/attachments/984068511183831053/1035982125956087838/unknown.png)
+![Alt text](https://cdn.discordapp.com/attachments/984068511183831053/1048709864299450388/stack_challenge01_maybe.png)

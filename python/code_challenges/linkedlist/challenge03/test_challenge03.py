@@ -1,18 +1,27 @@
-# Write your test here
 import pytest
-from challenge03 import SLL
+from challenge03 import *
 
-def test_deleteNthFromTail():
-    actual = sll_example.deleteNthFromTail(2)
-    expected = 1
-    assert expected == actual
 
-@pytest.fixture
-def sll_example():
-    sll = SLL()
-    sll.addToTail(1)
-    sll.addToTail(2)
-    sll.addToTail(3)
-    sll.addToTail(4)
-    sll.addToTail(5)
-    return sll
+def test1():
+    lista = Linkedlist()
+
+    lista.append(1)
+    lista.append(2)
+    lista.append(3)
+    lista.append(4)
+    lista.append(5)
+
+    actual = lista.Remove_nTh_node(2)
+    expected = [1, 2, 3, 5]
+    assert actual == expected
+
+
+def test2():
+    lista = Linkedlist()
+
+    lista.append(1)
+    lista.append(2)
+
+    actual = lista.Remove_nTh_node(2)
+    expected = [2]
+    assert actual == expected

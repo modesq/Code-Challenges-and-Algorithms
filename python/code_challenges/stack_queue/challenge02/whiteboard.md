@@ -1,0 +1,1 @@
+![Alt text](https://cdn.discordapp.com/attachments/984068511183831053/1048705558808641576/stack_challenge02.png)
