@@ -1,24 +1,29 @@
-# Write your test here
 import pytest
-from challenge01 import SLL, Node
+from challenge01 import *
 
 
-def test_deleteNode(sll):
-    actual = sll.deleteNode(5)
-    expected = "4-->1-->9-->None"
-    assert expected == actual
+def test_toArray():
+    linkedList = Linkedlist()
+    linkedList.append(4)
+    linkedList.append(5)
+    linkedList.append(1)
+    linkedList.append(9)
 
-def test_deleteNode2(sll):
-    actual = sll.deleteNode(1)
-    expected = "4-->5-->9-->None"
-    assert expected == actual
+    actual = linkedList.toArray()
+    expected = [4,5,1,9]
+    assert actual == expected
 
+def test_delete():
+    linkedList = Linkedlist()
+    linkedList.append(4)
+    linkedList.append(5)
+    linkedList.append(1)
+    linkedList.append(9)
 
-@pytest.fixture
-def sll():
-    sll1 = SLL()
-    sll1.addToTail(4)
-    sll1.addToTail(5)
-    sll1.addToTail(1)
-    sll1.addToTail(9)
-    return sll1
+    wantedNode = linkedList.getNode(1)
+    linkedList.removeByNode(wantedNode)
+    
+
+    actual = linkedList.toArray()
+    expected = [4,5,9]
+    assert actual == expected

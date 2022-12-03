@@ -1,28 +1,50 @@
-# Write here the code challenge solution
-class TreeNode:
-    def __init__(self, value, left=None, right=None):
-        self.value = value
-        self.left = None
-        self.right = None
+class Node:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 
-class Tree:
-    def __init__(self):
-        self.root = None
+def ArrayToBST(nums):
 
-
-def sortedArrayToBST(nums: list[int]):
     """
-    this fucntion takes a sorted list and then iterates over using recursion and the inner function "makeBSt()" until we reach the base case, then returns the root node
+    This Functions Recives Sorted Array,
+    and it Converts it to A Height Balanced Search Tree
     """
 
-    def makeBST(nums, start, end):
-        if start >= end:
-            return None
-        return TreeNode(
-            value=nums[(start + end) // 2],
-            left=makeBST(nums, start, (start + end) // 2),
-            right=makeBST(nums, 1 + ((start + end) // 2), end),
-        )
+    if not nums:
+        return None
 
-    return makeBST(nums, 0, len(nums))
+    # getting the mid
+    mid = len(nums) // 2
+    node = Node(nums[mid])
+
+    node.left = ArrayToBST(nums[:mid])
+    node.right = ArrayToBST(nums[mid + 1 :])
+    return node
+
+
+def bfs(root):
+
+    """
+    Breadth First Search (BFS), It take tree as input
+    and it returns the value of each node in every level for left to right
+    """
+
+    if root is None:
+        return
+    queue = [root]
+    array = []
+    while len(queue) > 0:
+        cur_node = queue.pop(0)
+        array.append(cur_node.val)
+        if cur_node.left is not None:
+            queue.append(cur_node.left)
+
+        if cur_node.left is None and len(queue) > 0:
+            array.append(None)
+
+        if cur_node.right is not None:
+            queue.append(cur_node.right)
+
+    return array
